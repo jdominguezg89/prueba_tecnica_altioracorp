@@ -47,7 +47,7 @@
             <div class="col-lg-8">
                 <h3>Clientes almacenados</h3>
                 <p>
-                    <dx:BootstrapGridView runat="server"  KeyFieldName="IdCliente">
+                    <dx:BootstrapGridView runat="server" KeyFieldName="IdCliente">
                         <SettingsBehavior AllowFocusedRow="true" />
                         <ClientSideEvents FocusedRowChanged="onFocusedRowChanged" />
                         <Columns>
@@ -60,28 +60,17 @@
         </div>
         <hr />
         <div class="row">
-            <div class="col-lg-4">
-                <h2>Visually Consistent</h2>
-                <p>Focus on business and stop wasting cycles on design. Leave it to Bootstrap's myriad of available visual themes to guarantee consistent look and feel throughout your web application - from early prototype to production. </p>
+            <div class="col-lg-12">
+                <h3>Gestionar artículos</h3>
                 <p>
-                    <dx:BootstrapButton ID="Button4" runat="server" Text="View details &raquo;" AutoPostBack="false">
-                    </dx:BootstrapButton>
                 </p>
             </div>
-            <div class="col-lg-4">
-                <h2>An Extensive Control Suite</h2>
-                <p>The DevExpress Bootstrap Control Suite includes a GridView with powerful data analysis and display features, Data Editors with automatic layout management, Navigation Controls, and fast and lightweight Chart controls. </p>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-lg-12">
+                <h3>Gestionar órdenes</h3>
                 <p>
-                    <dx:BootstrapButton ID="Button5" runat="server" Text="View details &raquo;" AutoPostBack="false">
-                    </dx:BootstrapButton>
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <h2>Powered by ASP.NET Controls</h2>
-                <p>New render comes with familiar feature set. Expect the same level of server-side and client-side API as in DevExpress ASP.NET WebForms Controls. And yes, we made sure that transition to the new suite is a breeze. </p>
-                <p>
-                    <dx:BootstrapButton ID="Button6" runat="server" Text="View details &raquo;" AutoPostBack="false">
-                    </dx:BootstrapButton>
                 </p>
             </div>
         </div>
