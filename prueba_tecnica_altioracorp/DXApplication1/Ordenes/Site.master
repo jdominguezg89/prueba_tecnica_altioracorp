@@ -1,0 +1,40 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Ordenes.SiteMaster" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>DevExpress ASP.NET project</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="/Scripts/popper.min.js"></script>
+    <script type="text/javascript" src="/Scripts/bootstrap.min.js"></script>
+</head>
+<body>
+    <form runat="server">
+
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+            <div class="container">
+                <div>
+                    <dx:BootstrapImage ID="logo_altioracorp" runat="server" Height="32px" ImageUrl="~/Images/logo_altioracorp.png" Width="91px"></dx:BootstrapImage>
+                    <a class="navbar-brand" href="#">Prueba técnica</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <asp:ContentPlaceHolder ID="Content" runat="server">
+            </asp:ContentPlaceHolder>
+
+            <hr />
+
+            <footer>
+                <p><%: DateTime.Now.ToLongDateString() %> - Prueba técnica realizada por: Ing. Juan Carlos Domínguez Gómez</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
