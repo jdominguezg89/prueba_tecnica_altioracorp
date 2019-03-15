@@ -68,11 +68,125 @@
     <Reference Include="DevExpress.Data.v18.2, Version=18.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\DevExpress.Charts.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.CodeParser.v18.2.dll" />
+    <Content Include="bin\DevExpress.Data.v18.2.dll" />
+    <Content Include="bin\DevExpress.Data.v18.2.xml" />
+    <Content Include="bin\DevExpress.DataAccess.v18.2.dll" />
+    <Content Include="bin\DevExpress.DataAccess.v18.2.xml" />
+    <Content Include="bin\DevExpress.Images.v18.2.dll" />
+    <Content Include="bin\DevExpress.Office.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.Office.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.Pdf.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.Pdf.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.Printing.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.Printing.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.RichEdit.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.RichEdit.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.Sparkline.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.Sparkline.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.SpellChecker.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.SpellChecker.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.Spreadsheet.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.Spreadsheet.v18.2.Core.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxRichEdit.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxRichEdit.v18.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxScheduler.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxScheduler.v18.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpellChecker.v18.2.xml" />
+    <Content Include="bin\DevExpress.Web.ASPxSpreadsheet.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.ASPxSpreadsheet.v18.2.xml" />
+    <Content Include="bin\DevExpress.Web.Bootstrap.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.Bootstrap.v18.2.xml" />
+    <Content Include="bin\DevExpress.Web.Resources.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.v18.2.dll" />
+    <Content Include="bin\DevExpress.Web.v18.2.xml" />
+    <Content Include="bin\DevExpress.Xpo.v18.2.dll" />
+    <Content Include="bin\DevExpress.Xpo.v18.2.xml" />
+    <Content Include="bin\DevExpress.XtraCharts.v18.2.dll" />
+    <Content Include="bin\DevExpress.XtraCharts.v18.2.xml" />
+    <Content Include="bin\DevExpress.XtraScheduler.v18.2.Core.dll" />
+    <Content Include="bin\DevExpress.XtraScheduler.v18.2.Core.xml" />
+    <Content Include="bin\de\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Spreadsheet.v18.2.Core.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxRichEdit.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxScheduler.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxSpellChecker.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.ASPxSpreadsheet.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\de\DevExpress.XtraScheduler.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Spreadsheet.v18.2.Core.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxRichEdit.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxScheduler.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxSpellChecker.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.ASPxSpreadsheet.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\es\DevExpress.XtraScheduler.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Spreadsheet.v18.2.Core.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxRichEdit.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxScheduler.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxSpellChecker.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.ASPxSpreadsheet.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\ja\DevExpress.XtraScheduler.v18.2.Core.resources.dll" />
+    <Content Include="bin\Ordenes.dll" />
+    <Content Include="bin\Ordenes.pdb" />
+    <Content Include="bin\ru\DevExpress.Data.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.DataAccess.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Office.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Pdf.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Printing.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.RichEdit.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Sparkline.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Spreadsheet.v18.2.Core.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxRichEdit.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxScheduler.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxSpellChecker.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.ASPxSpreadsheet.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.Resources.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Web.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.Xpo.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraCharts.v18.2.resources.dll" />
+    <Content Include="bin\ru\DevExpress.XtraScheduler.v18.2.Core.resources.dll" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Images\logo_altioracorp.png" />
+    <Content Include="obj\Debug\Ordenes.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\Ordenes.dll" />
+    <Content Include="obj\Debug\ordenes.dll.licenses" />
+    <Content Include="obj\Debug\Ordenes.pdb" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery.min.js" />
     <Content Include="Scripts\popper.min.js" />
@@ -83,6 +197,11 @@
   <ItemGroup>
     <Content Include="Web.config" />
     <Content Include="Documents\EjercicioPractico.pdf" />
+    <Content Include="bin\Ordenes.dll.config" />
+    <Content Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <Content Include="obj\Debug\Ordenes.csproj.CopyComplete" />
+    <Content Include="obj\Debug\Ordenes.csproj.CoreCompileInputs.cache" />
+    <Content Include="obj\Debug\Ordenes.csprojAssemblyReference.cache" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,6 +222,9 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.master.cs">
       <DependentUpon>Site.master</DependentUpon>
@@ -117,6 +239,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="obj\Debug\TempPE\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
