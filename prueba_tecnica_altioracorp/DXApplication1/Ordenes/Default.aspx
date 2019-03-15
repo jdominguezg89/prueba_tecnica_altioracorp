@@ -72,7 +72,7 @@
                             </dx:BootstrapGridViewTextColumn>
                             <dx:BootstrapGridViewTextColumn FieldName="Codigo" VisibleIndex="2" Caption="C&#243;digo"></dx:BootstrapGridViewTextColumn>
                             <dx:BootstrapGridViewTextColumn FieldName="Nombre" VisibleIndex="3"></dx:BootstrapGridViewTextColumn>
-                            <dx:BootstrapGridViewTextColumn FieldName="PrecioUnitario" VisibleIndex="4" Caption="Precio unitario"></dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="PrecioUnitario" VisibleIndex="4" Caption="Precio"></dx:BootstrapGridViewTextColumn>
                             <dx:BootstrapGridViewTextColumn FieldName="CreadoPor" VisibleIndex="5" Caption="Creado por">
                                 <SettingsEditForm Visible="False"></SettingsEditForm>
                             </dx:BootstrapGridViewTextColumn>
@@ -117,7 +117,56 @@
             <div class="col-lg-12">
                 <h3>Gestionar órdenes</h3>
                 <p>
-                    <dx:BootstrapGridView ID="GridViewOrdenes" runat="server"></dx:BootstrapGridView>
+                    <dx:BootstrapGridView ID="GridViewOrdenes" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" KeyFieldName="IdOrden">
+                        <SettingsDataSecurity AllowEdit="True" AllowInsert="True" AllowDelete="True"></SettingsDataSecurity>
+                        <Columns>
+                            <dx:BootstrapGridViewCommandColumn ShowDeleteButton="True" VisibleIndex="0" ShowNewButtonInHeader="True" ShowEditButton="True"></dx:BootstrapGridViewCommandColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="IdOrden" ReadOnly="True" VisibleIndex="1" Visible="false">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="CreadoPor" VisibleIndex="4" Caption="Creado por">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewDateColumn FieldName="FechaCreacion" VisibleIndex="5" Caption="Fecha creaci&#243;n">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewDateColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="EstacionCreacion" VisibleIndex="6" Caption="Estaci&#243;n creaci&#243;n">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="ModificadoPor" VisibleIndex="7" Caption="Modificado por">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewDateColumn FieldName="UltimaModificacion" VisibleIndex="8" Caption="&#218;ltima modificaci&#243;n">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewDateColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="EstacionModificacion" VisibleIndex="9" Caption="Estaci&#243;n modificaci&#243;n">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+
+                            <dx:BootstrapGridViewComboBoxColumn FieldName="IdCliente" Caption="Cliente" VisibleIndex="2" PropertiesComboBox-DataSourceID="">
+                                <PropertiesComboBox TextField="NombresApellidos" DataSourceID="SqlDataSourceClientes" ValueField="IdCliente"></PropertiesComboBox>
+                            </dx:BootstrapGridViewComboBoxColumn>
+                            <dx:BootstrapGridViewComboBoxColumn FieldName="IdArticulo" Caption="Art&#237;culo" VisibleIndex="3">
+                                <PropertiesComboBox TextField="CodigoNombre" DataSourceID="SqlDataSourceArticulo" ValueField="IdArticulo"></PropertiesComboBox>
+                            </dx:BootstrapGridViewComboBoxColumn>
+                        </Columns>
+                    </dx:BootstrapGridView>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource1" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT tOrdenes.* FROM tOrdenes" InsertCommand="sp_InsertarOrdenes" InsertCommandType="StoredProcedure" UpdateCommand="sp_ActualizarOrdenes" UpdateCommandType="StoredProcedure" DeleteCommand="sp_EliminarOrdenes" DeleteCommandType="StoredProcedure">
+                        <DeleteParameters>
+                            <asp:Parameter Name="IdOrden" Type="Int32"></asp:Parameter>
+                        </DeleteParameters>
+                        <InsertParameters>
+                            <asp:Parameter Name="IdCliente" Type="Int32"></asp:Parameter>
+                            <asp:Parameter Name="IdArticulo" Type="Int32"></asp:Parameter>
+                        </InsertParameters>
+                        <UpdateParameters>
+                            <asp:Parameter Name="IdOrden" Type="Int32"></asp:Parameter>
+                            <asp:Parameter Name="IdCliente" Type="String"></asp:Parameter>
+                            <asp:Parameter Name="IdArticulo" Type="String"></asp:Parameter>
+                        </UpdateParameters>
+                    </asp:SqlDataSource>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSourceClientes" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [IdCliente], [NombresApellidos] FROM [tClientes]"></asp:SqlDataSource>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSourceArticulo" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT IdArticulo, CONCAT(Codigo,' - ', Nombre) AS CodigoNombre FROM tArticulos"></asp:SqlDataSource>
                 </p>
             </div>
         </div>

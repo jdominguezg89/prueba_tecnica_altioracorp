@@ -9,6 +9,7 @@ namespace Ordenes
             if (!IsPostBack)
             {
                 GridViewArticulos.DataBind();
+                GridViewOrdenes.DataBind();
             }
         }
     }
