@@ -91,6 +91,8 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessLogic\BusinessLogic.cs" />
+    <Compile Include="DataAccess\DataAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -67,6 +67,15 @@ namespace Ordenes {
         protected global::DevExpress.Web.Bootstrap.BootstrapButton btnEliminar;
         
         /// <summary>
+        /// Control hfIdCliente.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfIdCliente;
+        
+        /// <summary>
         /// Control GridViewClientes.
         /// </summary>
         /// <remarks>
@@ -74,6 +83,15 @@ namespace Ordenes {
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::DevExpress.Web.Bootstrap.BootstrapGridView GridViewClientes;
+        
+        /// <summary>
+        /// Control SqlDataSource2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// Control GridViewArticulos.

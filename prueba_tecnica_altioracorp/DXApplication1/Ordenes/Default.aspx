@@ -3,8 +3,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="Content" runat="server">
     <script type="text/javascript">
         function onFocusedRowChanged(s, e) {
-            $("#focusedRowLabel").html("Focused row index: " + s.GetFocusedRowIndex());
+            $("#Content_hfIdCliente").val(s.keys[s.GetFocusedRowIndex()]);
+
+            gridClientes.GetRowValues(gridClientes.GetFocusedRowIndex(), 'Nombres', OnGetSelectedFieldValuesNombres);
+            gridClientes.GetRowValues(gridClientes.GetFocusedRowIndex(), 'Apellidos', OnGetSelectedFieldValuesApellidos);
         }
+        function OnGetSelectedFieldValuesNombres(selectedValues) {
+            if (selectedValues.length == 0)
+                return;
+            txbNombres.SetText(selectedValues);
+        }
+
+        function OnGetSelectedFieldValuesApellidos(selectedValues) {
+            if (selectedValues.length == 0)
+                return;
+            txbApellidos.SetText(selectedValues);
+        }
+
     </script>
     <div class="jumbotron">
         <div class="container">
@@ -21,40 +36,45 @@
             <div class="col-lg-4">
                 <h3>Datos del cliente</h3>
                 <p>
-                    <dx:BootstrapTextBox ID="txbNombres" runat="server" NullText="Ingrese los nombres del cliente"></dx:BootstrapTextBox>
+                    <dx:BootstrapTextBox ID="txbNombres" runat="server" NullText="Ingrese los nombres del cliente" ClientInstanceName="txbNombres"></dx:BootstrapTextBox>
                 </p>
                 <p>
-                    <dx:BootstrapTextBox ID="txbApellidos" runat="server" NullText="Ingrese los apellidos del cliente"></dx:BootstrapTextBox>
+                    <dx:BootstrapTextBox ID="txbApellidos" runat="server" NullText="Ingrese los apellidos del cliente" ClientInstanceName="txbApellidos"></dx:BootstrapTextBox>
                 </p>
                 <div class="row float-lg-right">
                     <div class="col-lg-4">
-                        <dx:BootstrapButton ID="btnInsertar" runat="server" Text="Insertar" AutoPostBack="false">
+                        <dx:BootstrapButton ID="btnInsertar" runat="server" Text="Insertar" AutoPostBack="false" OnClick="btnInsertar_Click">
                             <SettingsBootstrap RenderOption="Primary" Sizing="Small" />
                         </dx:BootstrapButton>
                     </div>
                     <div class="col-lg-4">
-                        <dx:BootstrapButton ID="btnModificar" runat="server" Text="Modificar" AutoPostBack="false">
+                        <dx:BootstrapButton ID="btnModificar" runat="server" Text="Modificar" AutoPostBack="false" OnClick="btnModificar_Click">
                             <SettingsBootstrap RenderOption="Default" Sizing="Small" />
                         </dx:BootstrapButton>
                     </div>
                     <div class="col-lg-4">
-                        <dx:BootstrapButton ID="btnEliminar" runat="server" Text="Eliminar" AutoPostBack="false">
+                        <dx:BootstrapButton ID="btnEliminar" runat="server" Text="Eliminar" AutoPostBack="false" OnClick="btnEliminar_Click">
                             <SettingsBootstrap RenderOption="Danger" Sizing="Small" />
                         </dx:BootstrapButton>
                     </div>
                 </div>
+                <asp:HiddenField ID="hfIdCliente" runat="server" />
             </div>
             <div class="col-lg-8">
                 <h3>Clientes almacenados</h3>
                 <p>
-                    <dx:BootstrapGridView ID="GridViewClientes" runat="server" KeyFieldName="IdCliente">
+                    <dx:BootstrapGridView ID="GridViewClientes" runat="server" KeyFieldName="IdCliente" AutoGenerateColumns="False" DataSourceID="SqlDataSource2" ClientInstanceName="gridClientes">
                         <SettingsBehavior AllowFocusedRow="true" />
                         <ClientSideEvents FocusedRowChanged="onFocusedRowChanged" />
                         <Columns>
-                            <dx:BootstrapGridViewDataColumn FieldName="Nombres" />
-                            <dx:BootstrapGridViewDataColumn FieldName="Apellidos" />
+                            <dx:BootstrapGridViewTextColumn FieldName="IdCliente" ReadOnly="True" VisibleIndex="0" Visible="false">
+                                <SettingsEditForm Visible="False"></SettingsEditForm>
+                            </dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="Nombres" VisibleIndex="1"></dx:BootstrapGridViewTextColumn>
+                            <dx:BootstrapGridViewTextColumn FieldName="Apellidos" VisibleIndex="2"></dx:BootstrapGridViewTextColumn>
                         </Columns>
                     </dx:BootstrapGridView>
+                    <asp:SqlDataSource runat="server" ID="SqlDataSource2" ConnectionString='<%$ ConnectionStrings:ConnectionString %>' SelectCommand="SELECT [IdCliente], [Nombres], [Apellidos] FROM [tClientes]"></asp:SqlDataSource>
                 </p>
             </div>
         </div>
